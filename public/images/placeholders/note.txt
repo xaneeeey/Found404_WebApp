@@ -1,0 +1,7 @@
+In a production environment, you would have actual image files here such as:
+
+1. movie-backdrop.jpg - A default movie background image
+2. movie-poster.jpg - A default movie poster image 
+3. mood-*.jpg - Background images for different moods
+
+For development purposes, the application will use the placeholder-backdrop.jpg and placeholder-poster.jpg files in the public directory. 

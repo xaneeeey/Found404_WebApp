@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 18, 18, 18;
+  --background-end-rgb: 10, 10, 10;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl;
+  }
+  
+  .mood-card {
+    @apply p-6 glass-card hover:bg-white/20 transition-all cursor-pointer overflow-hidden;
+  }
+  
+  .movie-card {
+    @apply glass-card overflow-hidden relative;
+  }
+  
+  .movie-info {
+    @apply absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+  }
+  
+  .custom-btn {
+    @apply px-6 py-3 glass-card hover:bg-white/20 transition-all text-white font-medium;
+  }
+} 
